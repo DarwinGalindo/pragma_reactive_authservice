@@ -1,0 +1,30 @@
+spring:
+  r2dbc:
+    url: r2dbc:mysql://localhost:3306/pragma_reto_reactivo_user_db
+    username: root
+    password: admin
+  sql:
+    init:
+      mode: always
+
+logging:
+  level:
+    org.springframework.r2dbc.core: DEBUG
+
+server:
+  port: 9090
+
+springdoc:
+  title: "API Usuarios"
+  description: "API para la gestion de usuarios"
+  version: "v1.0.0"
+  contact-name: "Darwin Galindo"
+  contact-email: "dargalindosilva@gmail.com"
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui
+
+jwt:
+  duration: 31104000
+  secret: chLhMF9w3mwDutysbQxsX8x4CGwZef4mayTGSmbAG2BUsXbYFKvXrVfnPCa62PJxp9TuHxx4PQAS2yGUTBAPy3Dy53j8Uj2wb2AQ3nK8VLg7tUx9HCzHATEp
